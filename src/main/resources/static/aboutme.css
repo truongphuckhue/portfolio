@@ -7,8 +7,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #282c34; /* Thay đổi màu nền nếu cần */
-    color: #61dafb; /* Thay đổi màu chữ nếu cần */
+    /*background: #282c34;*/ /* Thay đổi màu nền nếu cần */
+    color: #1d20a1; /* Thay đổi màu chữ nếu cần */
     font-family: Arial, sans-serif;
 
     overflow: hidden;
@@ -51,18 +51,37 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.experiencebutton{
+    position: relative;
+    background: #61dafb;
+    border-color: #61dafb
+    color: #1d20a1;
+    font-size: 1.25rem;
+    text-align: center;
+    /*padding: 20px 20px;*/
+    /*border-bottom: 1px solid #61dafb;*/
+    align-items: center;
+    ustify-content: center;
+}
+.experiencebutton .btn {
+    font-size: 1.25rem;
+    background-color: #61dafb;
+    border-color: #61dafb;
+    color: #282c34;
+}
+.experiencebutton .btn:hover {
+    background-color: #4fa3c4;
+    border-color: #4fa3c4;
+}
 .hero {
     position: relative;
-    background: #282c34;
+    background: #282c34 !important;
     color: #61dafb;
     text-align: center;
     padding: 20px 20px;
     border-bottom: 1px solid #61dafb;
 }
-.checksize{
-padding: 20px 20px;
-}
+
 .hero h1 {
     font-size: 2.5rem;
 }
@@ -74,17 +93,33 @@ padding: 20px 20px;
 .bg-light {
     background-color: #f8f9fa !important;
 }
+@keyframes hoverEffect {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .navbar {
 background-color: #282c34; /* Màu nền tối cho navbar */
 border-bottom: 2px solid #61dafb; /* Thêm đường viền dưới */
-margin-bottom: 20px; /* Khoảng cách giữa navbar và nội dung */
+/*margin-bottom: 20px;*/ /* Khoảng cách giữa navbar và nội dung */
 }
 
 .navbar-brand {
 color: #61dafb; /* Màu chữ sáng cho thương hiệu */
 font-weight: bold;
 }
-
+.navbar-brand:hover,
+.nav-link:hover,
+.hero h1:hover {
+    animation: hoverEffect 0.3s ease-in-out;
+    display: inline-block;
+}
 .navbar-brand:hover {
 color: #4fa3c4; /* Màu chữ khi di chuột */
 }
@@ -101,7 +136,6 @@ color: #4fa3c4; /* Màu chữ khi di chuột */
 .navbar-toggler-icon {
 background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8cGF0aCBkPSJNMTAsMEwgMTAsMTAgTDEwLDEwIEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTAsMTAgTDEwLDEwIEwgMTAsMEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg=='); /* Tùy chỉnh biểu tượng hamburger nếu cần */
 }
-
 footer {
     background-color: #343a40;
 }

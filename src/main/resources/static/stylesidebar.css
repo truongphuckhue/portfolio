@@ -63,35 +63,42 @@ body {
 .section {
     padding: 60px 20px;
 }
-
+@keyframes hoverEffect {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .navbar {
     background-color: #282c34; /* Màu nền tối cho navbar */
     border-bottom: 2px solid #61dafb; /* Thêm đường viền dưới */
     margin-bottom: 20px; /* Khoảng cách giữa navbar và nội dung */
 }
-
 .navbar-brand {
     color: #61dafb; /* Màu chữ sáng cho thương hiệu */
     font-weight: bold;
 }
-
+.navbar-brand:hover,
+.nav-link:hover,
+.hero h1:hover {
+    animation: hoverEffect 0.3s ease-in-out;
+    display: inline-block;
+}
 .navbar-brand:hover {
     color: #4fa3c4; /* Màu chữ khi di chuột */
 }
-
 .navbar-nav .nav-link {
     color: #61dafb; /* Màu chữ của các liên kết */
     font-weight: 500;
-    padding: 10px 20px; /* Thêm padding cho các liên kết */
-    border-radius: 5px; /* Làm cho các liên kết có góc bo tròn */
-    transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển tiếp cho màu nền và màu chữ */
 }
-
 .navbar-nav .nav-link:hover {
-    color: #ffffff; /* Màu chữ khi di chuột */
-    background-color: #4fa3c4; /* Màu nền khi di chuột */
+    color: #4fa3c4; /* Màu chữ khi di chuột */
 }
-
 .navbar-toggler-icon {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8cGF0aCBkPSJNMTAsMEwgMTAsMTAgTDEwLDEwIEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTAsMTAgTDEwLDEwIEwgMTAsMEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg=='); /* Tùy chỉnh biểu tượng hamburger nếu cần */
 }
