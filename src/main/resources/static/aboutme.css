@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #282c34; /* Thay đổi màu nền nếu cần */
+    color: #61dafb; /* Thay đổi màu chữ nếu cần */
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+    position: relative;
+    opacity: 0; /* Bắt đầu với opacity 0 */
+    transition: opacity 1s ease-out; /* Chuyển tiếp opacity */
+}
+/*-------------*/
+.fade-in {
+    opacity: 1; /* Thiết lập opacity 1 để hiện thị nội dung */
+}
+
+.content1 {
+    opacity: 0;
+    transform: translateY(-20px); /* Bắt đầu từ vị trí trên */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Chuyển tiếp opacity và vị trí */
+}
+
+.content1.show {
+    opacity: 1;
+    transform: translateY(0); /* Trả về vị trí ban đầu */
+}
+/*-----------*/
+/*.image-frame {
+    border: 5px solid #61dafb; *//* Màu viền *//*
+    padding: 10px; *//* Khoảng cách giữa hình ảnh và viền *//*
+    display: inline-block; *//* Để khung bao quanh hình ảnh *//*
+    border-radius: 0; *//* Gỡ bỏ border-radius để khung có hình vuông *//*
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); *//* Bóng đổ *//*
+}*/
+.divider {
+    width: 2px;
+    background-color: #61dafb; /* Màu của đường sọc */
+    height: 250px; /* Chiều cao của đường sọc, có thể điều chỉnh */
+    margin: 0 20px; /* Khoảng cách giữa hình ảnh và đoạn văn */
+}
+/*-----------------*/
+.content {
+    flex: 1; /* Làm cho phần nội dung chiếm không gian còn lại */
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    position: relative;
+    background: #282c34;
+    color: #61dafb;
+    text-align: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid #61dafb;
+}
+.checksize{
+padding: 20px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+.navbar {
+background-color: #282c34; /* Màu nền tối cho navbar */
+border-bottom: 2px solid #61dafb; /* Thêm đường viền dưới */
+margin-bottom: 20px; /* Khoảng cách giữa navbar và nội dung */
+}
+
+.navbar-brand {
+color: #61dafb; /* Màu chữ sáng cho thương hiệu */
+font-weight: bold;
+}
+
+.navbar-brand:hover {
+color: #4fa3c4; /* Màu chữ khi di chuột */
+}
+
+.navbar-nav .nav-link {
+color: #61dafb; /* Màu chữ của các liên kết */
+font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+color: #4fa3c4; /* Màu chữ khi di chuột */
+}
+
+.navbar-toggler-icon {
+background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8cGF0aCBkPSJNMTAsMEwgMTAsMTAgTDEwLDEwIEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTAsMTAgTDEwLDEwIEwgMTAsMEwiIHN0cm9rZT0iIzYxZGFmYiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg=='); /* Tùy chỉnh biểu tượng hamburger nếu cần */
+}
+
+footer {
+    background-color: #343a40;
+}

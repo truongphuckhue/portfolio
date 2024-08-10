@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylestrangchu.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" th:href="@{/khuetruong/home}">Khue Truong</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/khuetruong/home}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/aboutme}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/project}">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/contact}">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Phần Hero -->
+<header id="home" class="hero content">
+    <div class="container">
+        <h1 class="display-4">Hello, I'm [Truong Phuc Khue]</h1>
+        <p class="lead">A Java Developer with expertise in building scalable applications and solving complex problems.</p>
+        <a href="#projects" class="btn btn-lg btn-outline-light" th:href="@{/khuetruong/aboutme}">About me</a>
+    </div>
+</header>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 content">
+    <p>&copy; 2024 [Truong Phuc Khue]. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add('fade-in');
+
+        // Lấy tất cả các phần tử .content và thêm lớp 'show' để kích hoạt hiệu ứng
+        const contents = document.querySelectorAll('.content');
+        contents.forEach((content, index) => {
+            setTimeout(() => {
+                content.classList.add('show');
+            }, index * 300); // Thời gian trễ giữa các phần tử
+        });
+    });
+</script>
+</body>
+</html>

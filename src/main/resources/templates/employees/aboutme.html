@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/aboutme.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" th:href="@{/khuetruong/home}">Khue Truong</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/home}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/khuetruong/aboutme}">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/project}">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/khuetruong/contact}">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content content1">
+    <header id="contact" class="hero">
+        <div class="container">
+            <h1 class="display-4">About Me</h1>
+            <p class="lead">A brief introduction about who I am and what I do.</p>
+        </div>
+    </header>
+<!-- About Me Section -->
+<section id="about-me" class="bg-light py-5">
+        <div class="row" style="padding: 55px 60px">
+            <div class="col-md-4 text-center">
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/25/51/cute-laptop-kawaii-vector-15942551.jpg"
+                     alt="Your Photo" class="img-fluid rounded-square mb-4" style="width: 200px; height: 200px;">
+            </div>
+            <div class="divider"></div>
+            <div class="col-md-8" style="max-width: 50%;">
+                <p>Hello! I'm [Truong Phuc Khue], a passionate Java Developer with expertise in building scalable applications and solving complex problems. I enjoy working with modern technologies and continuously improving my skills. In my free time, I like to read, hike, and explore new places.</p>
+                <p>My journey as a developer started 4 years ago, and since then, I've worked on various projects, ranging from small business applications to large-scale enterprise solutions. I thrive in collaborative environments and love to share my knowledge with others.</p>
+                <p>If you're interested in learning more about my work or just want to say hi, feel free to get in touch through the contact page!</p>
+            </div>
+        </div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 [Truong Phuc Khue]. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add('fade-in');
+
+        // Lấy tất cả các phần tử .content và thêm lớp 'show' để kích hoạt hiệu ứng
+        const contents = document.querySelectorAll('.content');
+        contents.forEach((content, index) => {
+            setTimeout(() => {
+                content.classList.add('show');
+            }, index * 300); // Thời gian trễ giữa các phần tử
+        });
+    });
+</script>
+</body>
+</html>
