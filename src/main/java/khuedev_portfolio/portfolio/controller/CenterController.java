@@ -2,6 +2,7 @@ package khuedev_portfolio.portfolio.controller;
 
 import java.util.List;
 
+import khuedev_portfolio.portfolio.entity.ContactForm;
 import khuedev_portfolio.portfolio.service.EmployeeService;
 
 import org.springframework.stereotype.Controller;
@@ -12,11 +13,11 @@ import khuedev_portfolio.portfolio.entity.Employee;
 
 @Controller
 @RequestMapping("/khuetruong")
-public class EmployeeController {
+public class CenterController {
 
 	private EmployeeService employeeService;
 
-	public EmployeeController(EmployeeService theEmployeeService) {
+	public CenterController(EmployeeService theEmployeeService) {
 		employeeService = theEmployeeService;
 	}
 
@@ -30,7 +31,9 @@ public class EmployeeController {
 		return "employees/project";
 	}
 	@GetMapping("/contact")
-	public String contact(){
+	public String contact(Model model){
+		ContactForm contactForm = new ContactForm();
+		model.addAttribute("contactForm", contactForm);
 		return "employees/contact";
 	}
 	@GetMapping("/aboutme")
