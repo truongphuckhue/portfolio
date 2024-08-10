@@ -62,12 +62,14 @@ body {
     /*border-bottom: 1px solid #61dafb;*/
     align-items: center;
     ustify-content: center;
+    border-radius: 12px; /* Bo tròn góc nút */
 }
 .experiencebutton .btn {
     font-size: 1.25rem;
     background-color: #61dafb;
     border-color: #61dafb;
     color: #282c34;
+    border-radius: 12px; /* Bo tròn góc nút */
 }
 .experiencebutton .btn:hover {
     background-color: #4fa3c4;
